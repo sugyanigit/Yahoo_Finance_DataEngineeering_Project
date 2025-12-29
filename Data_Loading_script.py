@@ -28,7 +28,7 @@ def fetch_secret(secret_name,region_name):
     Fetch secret value from AWS Secrets Manager.
     """
     try:
-        client = boto3.client('secretsmanager')
+        client = boto3.client('secretsmanager',region_name='us-east-1')
         response = client.get_secret_value(SecretId=secret_name)
         return json.loads(response['SecretString'])
     except ClientError as e:

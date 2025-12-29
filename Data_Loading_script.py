@@ -88,13 +88,13 @@ if __name__ == "__main__":
     AWS_REGION='us-east-1'
     AWS_DEFAULT_REGION='us-east-1'
 
-    secret_name = os.getenv("SECRET_NAME", "Yahoo_finance_Api")  # AWS Secrets Manager secret name
+    secret_name = os.getenv("SECRET_NAME", "Yahoo_finance_api")  # AWS Secrets Manager secret name
     bucket_name = os.getenv("S3_BUCKET", "finance-stock-data-de")  # S3 bucket name
     symbols = os.getenv("STOCK_SYMBOLS", "AAPL,MSFT,GOOGL").split(",")  # Stock symbols
     try:
         # Fetch API key from AWS Secrets Manager
         secrets = fetch_secret(secret_name,region_name='us-east-1')
-        api_key = secrets['yahoo_finance_api_key']
+        api_key = secrets['yaho_finance_api_key']
 
         # Fetch stock data
         print("Fetching stock data...")

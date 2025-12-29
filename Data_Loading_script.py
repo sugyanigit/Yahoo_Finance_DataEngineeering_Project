@@ -23,7 +23,7 @@ def debug_credentials():
 
 debug_credentials()
 
-def fetch_secret(secret_name):
+def fetch_secret(secret_name,region_name):
     """
     Fetch secret value from AWS Secrets Manager.
     """
@@ -85,6 +85,9 @@ def write_to_s3(bucket_name, data, key_prefix):
 
 if __name__ == "__main__":
     # Environment variables
+    AWS_REGION='us-east-1'
+    AWS_DEFAULT_REGION='us-east-1'
+
     secret_name = os.getenv("SECRET_NAME", "Yahoo_finance_Api")  # AWS Secrets Manager secret name
     bucket_name = os.getenv("S3_BUCKET", "finance-stock-data-de")  # S3 bucket name
     symbols = os.getenv("STOCK_SYMBOLS", "AAPL,MSFT,GOOGL").split(",")  # Stock symbols

@@ -51,8 +51,8 @@ def write_to_s3(bucket_name, data, key_prefix):
 
 if __name__ == "__main__":
     # Environment variables
-    raw_bucket = os.getenv("RAW_BUCKET", "finance-stock-data-dea")  # Raw data S3 bucket
-    transformed_bucket = os.getenv("TRANSFORMED_BUCKET", "finance-stock-data-dea")  # Transformed data S3 bucket
+    raw_bucket = os.getenv("RAW_BUCKET", "finance-stock-data-de")  # Raw data S3 bucket
+    transformed_bucket = os.getenv("TRANSFORMED_BUCKET", "finance-stock-data-de")  # Transformed data S3 bucket
     raw_prefix = os.getenv("RAW_PREFIX", "raw/")  # Prefix for raw data in S3
     transformed_prefix = os.getenv("TRANSFORMED_PREFIX", "transformed/")  # Prefix for transformed data in S3
 

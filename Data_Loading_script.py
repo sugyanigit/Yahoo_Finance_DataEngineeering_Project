@@ -85,8 +85,8 @@ def write_to_s3(bucket_name, data, key_prefix):
 
 if __name__ == "__main__":
     # Environment variables
-    secret_name = os.getenv("SECRET_NAME", "Yahoo_Finance_Api")  # AWS Secrets Manager secret name
-    bucket_name = os.getenv("S3_BUCKET", "finance-stock-data-dea")  # S3 bucket name
+    secret_name = os.getenv("SECRET_NAME", "Yahoo_finance_Api")  # AWS Secrets Manager secret name
+    bucket_name = os.getenv("S3_BUCKET", "finance-stock-data-de")  # S3 bucket name
     symbols = os.getenv("STOCK_SYMBOLS", "AAPL,MSFT,GOOGL").split(",")  # Stock symbols
     try:
         # Fetch API key from AWS Secrets Manager

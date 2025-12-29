@@ -90,7 +90,7 @@ if __name__ == "__main__":
     symbols = os.getenv("STOCK_SYMBOLS", "AAPL,MSFT,GOOGL").split(",")  # Stock symbols
     try:
         # Fetch API key from AWS Secrets Manager
-        secrets = fetch_secret(secret_name)
+        secrets = fetch_secret(secret_name,region_name='us-east-1')
         api_key = secrets['yahoo_finance_api_key']
 
         # Fetch stock data
